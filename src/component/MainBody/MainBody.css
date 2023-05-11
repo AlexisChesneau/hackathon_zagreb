@@ -1,0 +1,44 @@
+.gauche,
+.droite {
+  display: flex;
+  justify-content: center;
+}
+
+.gauche {
+  margin-top: 80px;
+}
+
+.droite {
+  margin-bottom: 80px;
+}
+
+.buttonmap {
+  background-color: #78a861;
+}
+
+.buttonweather {
+  background-color: #32d2f5;
+}
+
+.buttontips {
+  background-color: #fa7414;
+}
+
+.buttoncity {
+  background-color: #e5e92c;
+}
+
+.buttoncity,
+.buttontips,
+.buttonweather,
+.buttonmap {
+  border-radius: 15px;
+  width: 600px;
+  height: 350px;
+  border: none;
+  margin: 40px;
+}
+
+.bloc-button h2 {
+  color: aliceblue;
+}
