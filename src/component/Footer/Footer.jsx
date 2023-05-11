@@ -4,7 +4,11 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <img src="./src/assets/icons/copyright.svg" alt="copyright" />
+        <img
+          className="charo"
+          src="./src/assets/icons/copyright.svg"
+          alt="copyright"
+        />
         <div className="pouloulou">
           <div className="reseau">
             <img src="./src/assets/icons/facebook.svg" alt="A" />
