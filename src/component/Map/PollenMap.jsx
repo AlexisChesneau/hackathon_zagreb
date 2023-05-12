@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { MapContainer, TileLayer, Marker, useMap, Circle, Popup } from 'react-leaflet'
 import * as BreezometerService from '../../service/breezometer.service'
-import { Table, Tag  } from 'antd';
+import { Table, Tag, Tabs  } from 'antd';
 import { useState, useEffect } from 'react';
+import moment from 'moment';
 
 const PollenMap = ({address}) => {
   const [pollens, setPollens] = useState(null)
@@ -10,21 +11,21 @@ const PollenMap = ({address}) => {
   useEffect(() => {
     if (address.zoom) {
       BreezometerService.getPollen(address.lat, address.lon).then(pollenData => {
-        setPollens(pollenData.data[0])
+        setPollens(pollenData.data)
       }) 
     }
   }, [address])
 
-  const getTableData = () => {
-    const dataSource = Object.keys(pollens?.types).map(type => {
-      const pollenIndex = pollens?.types[type]?.index?.value
+  const getTableData = (index) => {
+    const dataSource = Object.keys(pollens[index]?.types).map(type => {
+      const pollenIndex = pollens[index]?.types[type]?.index?.value
       const pollenColor = pollenIndex < 1 ? 'green' : pollenIndex < 2 ?
         'yellow' : pollenIndex < 3 ? 'orange' : pollenIndex < 4 ? 'red' : 'purple'
       return {
         type: type,
         index: pollenIndex ? `${pollenIndex}/5` : 'No data',
         category: <Tag color={pollenColor}>
-          {pollens?.types[type]?.index?.category || 'No data'}
+          {pollens[index]?.types[type]?.index?.category || 'No data'}
         </Tag>,
       }
     })
@@ -47,14 +48,12 @@ const PollenMap = ({address}) => {
   }
 
   
-  const pollenIndex = pollens?.types?.grass?.index?.value;
+  const pollenIndex = pollens?.[0]?.types?.grass?.index?.value;
   const pollenColor = pollenIndex < 1 ? 'green' : pollenIndex < 2 ?
     'yellow' : pollenIndex < 3 ? 'orange' : pollenIndex < 4 ? 'red' : 'purple'
   let dataSource = [];
   let columns = [];
-  if (pollens) {
-    ({dataSource, columns} = getTableData())
-  }
+  if (pollens) ({dataSource, columns} = getTableData(0))
   return <div>
     <h1>
       Carte de Pollen
@@ -79,7 +78,15 @@ const PollenMap = ({address}) => {
         pathOptions={{ color: pollenColor}} 
         radius={3000}
       />}
-    </MapContainer>,
+    </MapContainer>
+    <Tabs defaultActiveKey="1" centered style={{width: '80%'}}>
+      {pollens && pollens.map((pollen, index) => {
+        const { dataSource, columns } = getTableData(index);
+        return <Tabs.TabPane tab={moment(pollen.date).format('DD / MM / YYYY')} key={index}>
+          <Table pagination={false} dataSource={dataSource} columns={columns}/>
+        </Tabs.TabPane>
+      })}
+    </Tabs>
   </div>
 }
 
