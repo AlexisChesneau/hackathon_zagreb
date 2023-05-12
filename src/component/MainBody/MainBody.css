@@ -33,12 +33,36 @@
 .buttonweather,
 .buttonmap {
   border-radius: 15px;
-  width: 600px;
-  height: 350px;
+  width: 400px;
+  height: 250px;
   border: none;
   margin: 40px;
 }
 
 .bloc-button h2 {
   color: aliceblue;
+}
+
+.bloc-button img {
+  padding: 20px;
+}
+
+@media screen and (max-width: 428px) {
+  .gauche,
+  .droite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .buttoncity,
+  .buttontips,
+  .buttonweather,
+  .buttonmap {
+    width: 300px;
+    height: 220px;
+    margin: 20px;
+  }
+  .bloc-button h2 {
+    font-size: 18px;
+  }
 }
