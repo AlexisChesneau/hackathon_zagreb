@@ -4,7 +4,7 @@ export default function TopFlops() {
   return (
     <div className="topflop">
       <div className="top">
-        <h1>Les Tops</h1>
+        <h1>Destinations conseillées</h1>
       </div>
       <div className="topville">
         <div className="container1">
@@ -38,7 +38,7 @@ export default function TopFlops() {
       </div>
 
       <div className="flop">
-        <h1>Les Flops</h1>
+        <h1>Zone à risques de contact avec allergènes fort</h1>
       </div>
       <div className="flopville">
         <div className="container3">
