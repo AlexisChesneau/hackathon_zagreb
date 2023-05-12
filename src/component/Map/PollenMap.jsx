@@ -79,7 +79,7 @@ const PollenMap = ({address}) => {
         radius={3000}
       />}
     </MapContainer>
-    <Tabs defaultActiveKey="1" centered style={{width: '80%'}}>
+    <Tabs defaultActiveKey="1" centered style={{width: '90%', paddingLeft: '8%'}}>
       {pollens && pollens.map((pollen, index) => {
         const { dataSource, columns } = getTableData(index);
         return <Tabs.TabPane tab={moment(pollen.date).format('DD / MM / YYYY')} key={index}>

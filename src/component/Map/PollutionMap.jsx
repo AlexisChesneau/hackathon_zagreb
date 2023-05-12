@@ -23,7 +23,7 @@ const PollutionMap = ({address}) => {
         return {
           type: pollution.dominant_pollutant,
           aqi: pollution.aqi || 'No data',
-          category: <Tag color={pollutions.color}>
+          category: <Tag color={pollution.color}>
             {pollution?.category || 'No data'}
           </Tag>,
         }
@@ -72,10 +72,10 @@ const PollutionMap = ({address}) => {
         radius={3000}
       />}
     </MapContainer>
-    <Tabs defaultActiveKey="1" centered style={{width: '80%'}}>
+    <Tabs defaultActiveKey="1" centered style={{width: '90%', paddingLeft: '8%'}}>
       {pollutions && pollutions.map((pollution, index) => {
         const { dataSource, columns } = getTableData(index);
-        return <Tabs.TabPane tab={moment(pollution.datetime).format('DD / MM / YYYY')} key={index}>
+        return <Tabs.TabPane tab={moment(pollution.datetime).format('HH:ss')} key={index}>
           <Table pagination={false} dataSource={dataSource} columns={columns}/>
         </Tabs.TabPane>
       })}
