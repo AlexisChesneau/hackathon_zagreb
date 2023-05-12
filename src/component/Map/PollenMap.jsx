@@ -55,7 +55,7 @@ const PollenMap = ({address}) => {
   let columns = [];
   if (pollens) ({dataSource, columns} = getTableData(0))
   return <div>
-    <h1>
+    <h1 style={{textAlign: 'center'}}>
       Carte de Pollen
     </h1>
     <MapContainer

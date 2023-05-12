@@ -52,7 +52,7 @@ const PollutionMap = ({address}) => {
     ({dataSource, columns} = getTableData(0))
   }
   return <div>
-    <h1> {"Carte de Pollution de l'air"} </h1>
+    <h1 style={{textAlign: 'center'}}> {"Carte de Pollution de l'air"} </h1>
     <MapContainer
       center={[46.603354, 1.888334]}
       zoom={5.5}
