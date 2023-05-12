@@ -5,12 +5,15 @@
   background-repeat: no-repeat;
 }
 
+.titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 50px;
   color: #f6ffbd;
 }
 
@@ -21,4 +24,26 @@
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
+}
+
+@media screen and (max-width: 428px) {
+  .img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+  }
+
+  .h1 {
+    font-size: 20px;
+    position: relative;
+    color: f6ffbd;
+  }
+  .titre {
+    height: 120px;
+    display: flex;
+    align-items: center;
+  }
+  .p {
+    display: none;
+  }
 }

@@ -10,6 +10,8 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    indent: ['error', 2, { SwitchCase: 1 }],
     'react-refresh/only-export-components': 'warn',
+    'react/prop-types': 'off',
   },
 }
