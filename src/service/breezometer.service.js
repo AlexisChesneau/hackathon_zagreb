@@ -15,8 +15,8 @@ export const getPollen = async (lat, lon) => {
 
 export const getAirQuality = async (lat, lon) => {
   try {
-    const url = `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${
-      lat}&lon=${lon}&days=3&key=${ACCESS_TOKEN}`;
+    const url = `https://api.breezometer.com/air-quality/v2/historical/hourly?lat=${
+      lat}&lon=${lon}&hours=3&key=${ACCESS_TOKEN}`;
     const { data } = await axios(url);
     return data;
   } catch (error) {
