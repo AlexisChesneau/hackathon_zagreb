@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { MapContainer, TileLayer, Marker, useMap, Circle, Popup } from 'react-leaflet'
 import * as BreezometerService from '../../service/breezometer.service'
-import { Table, Tag  } from 'antd';
+import { Table, Tag, Tabs  } from 'antd';
 import { useState, useEffect } from 'react';
 
 const PollenMap = ({address}) => {
@@ -79,7 +79,7 @@ const PollenMap = ({address}) => {
         pathOptions={{ color: pollenColor}} 
         radius={3000}
       />}
-    </MapContainer>,
+    </MapContainer>;
   </div>
 }
 
