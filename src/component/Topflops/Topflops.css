@@ -16,6 +16,7 @@
 .flopville {
   display: flex;
   margin: 60px 0;
+  justify-content: space-evenly;
 }
 
 .image-bjornoya,
@@ -41,16 +42,45 @@
 }
 
 .topflop h2 {
+  font-size: 17px;
+  font-family: inter;
+  padding: 30px;
+}
+
+.topflop h1 {
   font-size: 30px;
   font-family: inter;
 }
 
-.topflop h1 {
-  font-size: 40px;
+.topflop p {
+  font-size: 15px;
   font-family: inter;
 }
 
-.topflop p {
-  font-size: 20px;
-  font-family: inter;
+@media screen and (max-width: 428px) {
+  .topville,
+  .flopville {
+    display: flex;
+    flex-direction: column;
+  }
+  .topflop img {
+    height: 250px;
+    width: 350px;
+    border-radius: 15px;
+  }
+  .topflop h2 {
+    font-size: 30px;
+  }
+  .topflop p {
+    font-size: 20px;
+  }
+  .image-remy h2 {
+    padding: 10px 10px 30px 80px;
+  }
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    padding: 40px 0;
+  }
 }

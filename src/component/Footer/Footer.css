@@ -18,11 +18,26 @@ footer img {
 }
 
 .reseau img {
-  height: 30px;
+  height: 25px;
 }
 
 .pouloulou {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.charo {
+  height: 15px;
+  padding: 0 0 0 20px;
+}
+
+@media screen and (max-width: 428px) {
+  .reseau {
+    display: block;
+    padding-left: 52px;
+  }
+  footer img {
+    margin: 15px;
+  }
 }

@@ -16,10 +16,8 @@ export default function TopFlops() {
             ></img>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Discrète et loin de tout,
+            <br /> vous ne serez pas ennuyé par le pollen et la pollution.
           </p>
         </div>
 
@@ -32,10 +30,9 @@ export default function TopFlops() {
             ></img>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Si petit village que même la pluie ne le trouve pas.
+            <br /> Si vous avez la chance de tomber dessus par hasard, restez-y
+            !
           </p>
         </div>
       </div>
@@ -50,10 +47,8 @@ export default function TopFlops() {
             <img src="../src/assets/images/Hum.jpeg" alt="Photo de Hum"></img>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            20 habitants, 42 degrés en plein soleil tous les étés,
+            <br /> pas intérêt d'y arriver sans son chargeur de téléphone.
           </p>
         </div>
 
@@ -65,12 +60,7 @@ export default function TopFlops() {
               alt="Photo de Paris"
             ></img>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <p>Les parisiens.</p>
         </div>
       </div>
     </div>
