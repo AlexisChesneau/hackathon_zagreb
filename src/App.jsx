@@ -12,7 +12,6 @@ function App() {
     <>
       <NavBar />
       <Router>
-        <Map />
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/map" element={<Map />} />
